@@ -29,11 +29,11 @@ export const NewMovie = ({ onAdd }: Props) => {
     event.preventDefault();
     increaseCount();
     const movie: Movie = {
-      title: titleInput,
-      description: descriptionInput,
-      imgUrl: imgUrlInput,
-      imdbUrl: imdbUrlInput,
-      imdbId: imdbIdInput,
+      title: titleInput.trimEnd(),
+      description: descriptionInput.trimEnd(),
+      imgUrl: imgUrlInput.trimEnd(),
+      imdbUrl: imdbUrlInput.trimEnd(),
+      imdbId: imdbIdInput.trimEnd(),
     };
 
     if (successfulSubmission) {
